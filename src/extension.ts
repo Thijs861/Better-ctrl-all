@@ -6,6 +6,33 @@ import * as vscode from 'vscode';
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
+	// First custom command.
+	const command = 'better-ctrl-all.sayHello';
+
+	const commandHandler = (name: string = 'testing') => {
+		console.log(`Hello ${name}!!!`);
+	}
+
+	context.subscriptions.push(vscode.commands.registerCommand(command, commandHandler));
+
+
+	/*
+
+	# Features
+	
+	-Settings panel
+	-Ctrl all selection up
+	-Ctrl all selection down
+	-Memory saves selected setting
+
+	-Ctrl all selection block
+
+	# User flow
+	WHEN user selects ctrl.all.selection.up THEN
+		Extension REMAPS key to select the CURRENT LINE AND UP.
+		Extension SAVES preference in file.
+	*/
+
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "better-ctrl-all" is now active!');

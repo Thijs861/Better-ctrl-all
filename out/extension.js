@@ -59,13 +59,9 @@ function activate(context) {
     -Ctrl all selection block
 
     # User flow
-
-    -User activates extension
-    -User selects Ctrl.all.selection.up
-    -Extension remaps key to only select up.
-    -Extension saves user's selection.
-
-
+    WHEN user selects ctrl.all.selection.up THEN
+        Extension REMAPS key to select the CURRENT LINE AND UP.
+        Extension SAVES preference in file.
     */
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
