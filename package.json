@@ -16,6 +16,10 @@
       {
         "command": "better-ctrl-all.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "better-ctrl-all.sayHello",
+        "title": "sayHello"
       }
     ]
   },
